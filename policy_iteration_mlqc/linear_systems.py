@@ -237,6 +237,9 @@ class LinearSystemControlled(LinearSystem):
 
     def policy_evaluation(self):
         # Compute value function based on current policy
+        # This is just a trivial wrapper around the X property,
+        # which is a wrapper around the P_aug property,
+        # which solves a generalized Lyapunov equation
 
         # It is trivially (if tediously) verified that
         # P == P_aug_xx + P_aug_xu + P_aug_ux + P_aug_uu
